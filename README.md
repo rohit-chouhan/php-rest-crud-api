@@ -1,5 +1,7 @@
 ## GET STARTED
 
+> Configure Config.env
+
 Before you can start using the application, you need to configure certain information from the **config.env** file. This includes setting up your database connection details, configuring authorization settings, and defining other important variables such as file upload limits and supported file types.
 
 ### Database Configuration
@@ -56,7 +58,7 @@ Create a new user in the `users` table with the specified name.
 
 | **Method** | **URL**           | **Body** |
 |------------|------------------|------------------|
-| POST       | example.com/users**?xform=true** | form |
+| POST       | example.com/users<b>?xform=true</b> | form |
 
 - **Body:**
 
@@ -67,13 +69,13 @@ Create a new user in the `users` table with the specified name.
 </form>
 ```
 #### Image/File upload
-If you want to send data from a form and upload files, you need to use a form request. Image uploads will only work if the request is sent as form data. To use form data for your request, include the parameter `xform=true`. Additionally, for the image file input field, use the parameter filefield=fieldname, where `fieldname` is the name of the file input **field name** and** column name** of table in your HTML form.
+If you want to send data from a form and upload files, you need to use a form request. Image uploads will only work if the request is sent as form data. To use form data for your request, include the parameter `xform=true`. Additionally, for the image file input field, use the parameter filefield=fieldname, where `fieldname` is the name of the file input **field name** and **column name** of table in your HTML form.
 > Make sure you have defined `xform=true` in url
 > Make sure you have defined `filefield=fieldname,fieldname` (separate by comma if multiple image) in url
 
 | **Method** | **URL**           | **Body** |
 |------------|------------------|------------------|
-| POST       | example.com/users**?xform=true&filefield=profile** | form |
+| POST       | example.com/users<b>?xform=true&filefield=profile</b> | form |
 
 - **Body:**
 
@@ -94,19 +96,19 @@ So this Form will store `Rohit` value in `name` column, and selected image will 
 |------------|------------------|
 | GET      | example.com/users |
 
-* Retrevie data by filtering, This will return data where** id=1** & **name=Rohit**, like this you can filter your data like (`column=value`) 
+* Retrevie data by filtering, This will return data where **id=1** & **name=Rohit**, like this you can filter your data like (`column=value`) 
 
 | **Method** | **URL**        |
 |------------|------------------|
-| GET      | example.com/users**?id=1&name=Rohit** |
+| GET      | example.com/users<b>?id=1&name=Rohit</b> |
 
 #### UPDATE
 
 | **Method** | **URL**        |  **Body**        |
 |------------|------------------|-----------------|
-| PUT      | example.com/users**?id=1** | json |
+| PUT      | example.com/users<b>?id=1</b> | json |
 |        |  | |
-| PUT      | example.com/users**?email=rohit@gmail.com** | json |
+| PUT      | example.com/users<b>?email=rohit@gmail.com</b> | json |
 
 - **Body :**
 
